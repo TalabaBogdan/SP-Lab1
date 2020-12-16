@@ -1,5 +1,8 @@
 package com.model;
 
+import com.interfaces.Element;
+import com.interfaces.Visitor;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,7 +11,7 @@ public class Section implements Element {
     private List<Element> content = new ArrayList<Element>();
 
 
-    Section(String title) {
+    public Section(String title) {
         this.sectionTitle = title;
     }
     public void print() {
@@ -30,5 +33,25 @@ public class Section implements Element {
 
     public Element getElement(int index) {
         return this.content.get(index);
+    }
+
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
+
+    public String getSectionTitle() {
+        return sectionTitle;
+    }
+
+    public void setSectionTitle(String sectionTitle) {
+        this.sectionTitle = sectionTitle;
+    }
+
+    public List<Element> getContent() {
+        return content;
+    }
+
+    public void setContent(List<Element> content) {
+        this.content = content;
     }
 }

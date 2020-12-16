@@ -1,12 +1,14 @@
 package com.model;
 
-import com.service.AlignStrategy;
+import com.interfaces.AlignStrategy;
+import com.interfaces.Element;
+import com.interfaces.Visitor;
 
 public class Paragraph implements Element {
     String pText;
     AlignStrategy alignStrategy;
 
-    Paragraph(String text) {
+    public Paragraph(String text) {
         this.pText = text;
     }
 
@@ -32,5 +34,17 @@ public class Paragraph implements Element {
             return;
         }
         System.out.println(this.toString());
+    }
+
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
+
+    public void setpText(String pText) {
+        this.pText = pText;
+    }
+
+    public AlignStrategy getAlignStrategy() {
+        return alignStrategy;
     }
 }

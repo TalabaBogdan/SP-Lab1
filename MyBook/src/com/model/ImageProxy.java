@@ -1,5 +1,8 @@
 package com.model;
 
+import com.interfaces.Element;
+import com.interfaces.Visitor;
+
 public class ImageProxy implements Element {
     String url;
     int dim;
@@ -9,7 +12,7 @@ public class ImageProxy implements Element {
         this.url = url;
     }
 
-    Image loadImage(){
+    public Image loadImage(){
         if (realimg == null){
             realimg = new Image(url);
         }
@@ -19,5 +22,9 @@ public class ImageProxy implements Element {
     @Override
     public void print() {
         loadImage().print();
+    }
+
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
     }
 }

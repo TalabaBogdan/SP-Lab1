@@ -1,4 +1,4 @@
-package com.service;
+package com.interfaces;
 import com.model.*;
 
 public interface AlignStrategy {
