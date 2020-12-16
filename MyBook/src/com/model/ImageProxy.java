@@ -1,4 +1,6 @@
-public class ImageProxy implements Element{
+package com.model;
+
+public class ImageProxy implements Element {
     String url;
     int dim;
     Image realimg;

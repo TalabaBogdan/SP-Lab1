@@ -1,3 +1,5 @@
+package com.service;
+
 public class AlignCenter implements AlignStrategy{
 
     @Override

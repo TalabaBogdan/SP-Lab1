@@ -1,3 +1,7 @@
+package com.model;
+
+import com.service.AlignStrategy;
+
 public class Paragraph implements Element {
     String pText;
     AlignStrategy alignStrategy;
@@ -16,7 +20,7 @@ public class Paragraph implements Element {
 
     @Override
     public String toString() {
-        return "Paragraph{" +
+        return "com.model.Paragraph{" +
                 "pText='" + pText + '\'' +
                 '}';
     }

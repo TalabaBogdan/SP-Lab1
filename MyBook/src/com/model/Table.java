@@ -1,3 +1,5 @@
+package com.model;
+
 public class Table implements Element {
     String table;
     Table (String table) {
@@ -6,7 +8,7 @@ public class Table implements Element {
 
     @Override
     public String toString() {
-        return "Table{" +
+        return "com.model.Table{" +
                 "table='" + table + '\'' +
                 '}';
     }

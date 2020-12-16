@@ -1,3 +1,5 @@
+package com.model;
+
 import java.util.concurrent.TimeUnit;
 
 public class Image implements Element {
@@ -14,7 +16,7 @@ public class Image implements Element {
 
     @Override
     public String toString() {
-        return "Image{" +
+        return "com.model.Image{" +
                 "image='" + image + '\'' +
                 '}';
     }

@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+package com.model;
 
 public class Book {
     private String title;
@@ -14,7 +13,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
+        return "com.model.Book{" +
                 "title='" + title + '\'' +
                 '}';
     }
