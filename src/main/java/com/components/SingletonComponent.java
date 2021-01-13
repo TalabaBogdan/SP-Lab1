@@ -1,6 +1,7 @@
-package lab10.lab10examples;
+package com.components;
 
 import org.springframework.stereotype.Component;
+
 @Component
 public class SingletonComponent {
     public SingletonComponent() {
